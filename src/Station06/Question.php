@@ -6,5 +6,6 @@ class Question
 {
     public function main(): array
     {
+        $array = ['red', 'blue', 'yellow'] ;
     }
 }
