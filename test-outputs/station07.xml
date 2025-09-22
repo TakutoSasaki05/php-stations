@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/app/tests/Station07" tests="3" assertions="2" errors="1" warnings="0" failures="1" skipped="0" time="0.010559">
+    <testsuite name="Tests\Station07\QuestionTest" file="/app/tests/Station07/QuestionTest.php" tests="3" assertions="2" errors="1" warnings="0" failures="1" skipped="0" time="0.010559">
+      <testcase name="one_期待値と一致するよう結合された連想配列を返す" class="Tests\Station07\QuestionTest" classname="Tests.Station07.QuestionTest" file="/app/tests/Station07/QuestionTest.php" line="23" assertions="1" time="0.010067">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Station07\QuestionTest::one_期待値と一致するよう結合された連想配列を返す
+Failed asserting that two arrays are equal.
+--- Expected
++++ Actual
+@@ @@
+ Array (
+     '北海道' =&gt; 1
+     '東京都' =&gt; 13
+-    '京都府' =&gt; 26
++    '京都府' =&gt; 'XX'
+     '大阪府' =&gt; 27
+     '広島県' =&gt; 34
+ )
+
+/app/tests/Station07/QuestionTest.php:28</failure>
+      </testcase>
+      <testcase name="two_結合した姓名を要素に持つ配列を返す" class="Tests\Station07\QuestionTest" classname="Tests.Station07.QuestionTest" file="/app/tests/Station07/QuestionTest.php" line="40" assertions="1" time="0.000030"/>
+      <testcase name="three_期待値と一致するよう抽出された連想配列を返す" class="Tests\Station07\QuestionTest" classname="Tests.Station07.QuestionTest" file="/app/tests/Station07/QuestionTest.php" line="51" assertions="0" time="0.000461">
+        <error type="TypeError">Tests\Station07\QuestionTest::three_期待値と一致するよう抽出された連想配列を返す
+TypeError: Src\Station07\Question::three(): Return value must be of type array, none returned
+
+/app/src/Station07/Question.php:33
+/app/tests/Station07/QuestionTest.php:53</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>
