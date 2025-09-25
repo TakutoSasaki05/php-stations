@@ -31,5 +31,6 @@ class Question
             ['name' => 'banana', 'price' => 200],
             ['name' => 'orange', 'price' => 120],
         ];
+        return array_column($array, 'price', 'name');
     }
 }
