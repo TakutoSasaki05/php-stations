@@ -27,13 +27,18 @@ class Question
                 'password' => 'sato',
             ],
         ];
-        $full_names = array_map(function ($user) {
-            return $user['last_name'] . $user['first_name'];
+        $full_names = array_map(function ($users) {
+            return $users['last_name'] . $users['first_name'];
         }, $users);
-        foreach ($array as $value) {
-            $full_names = array_map(function ($user) {
-                return $user['last_name'] . $user['first_name'];
-            }, $users);
+        // print_r($full_names);
+        foreach ($users as &$value) {
+            $value['full_name'] = $value['last_name'] . $value['first_name'];
+            if (!isset($value['age'])) {
+                $value['age'] = null;
+            }
+            unset($value['password']);
         }
+        print_r($users);
+        return $users;
     }
 }
